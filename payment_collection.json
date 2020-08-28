@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "1071c6f6-5aec-440e-b6da-31e417d26acb",
+		"_postman_id": "fddcea47-715e-47e2-9d8d-c2efd5fc9dee",
 		"name": "Payments",
 		"description": "version=1.0.0 - Paymentmethod",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
@@ -22,16 +22,81 @@
 				},
 				"url": "http://payment-method-route-test-buildconfig.apps.ocp44tef.rapidsweb.com/paymentmethods/v1/paymentmethod"
 			},
-			"response": []
+			"response": [
+				{
+					"name": "CreatePaymenMethod",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"href\": \"href/paymentmethod\",\r\n    \"name\": \"Main Credit card\",\r\n    \"description\": \"Payment through Credit card\",\r\n    \"preferred\": true,\r\n    \"type\": \"CC - Saferpay\",\r\n    \"customerId\": \"1-4917643024625\",\r\n    \"status\": \"Active\",\r\n    \"statusDate\": \"2021-05-08T12:06:38.230Z\",\r\n    \"relatedParty\": [\r\n        {\r\n            \"href\": \"{customerManagementAPI}/customer/1-4917643024625\",\r\n            \"referredType\": \"customer\",\r\n            \"name\": \"Steffen Ziga\",\r\n            \"role\": \"owner\"\r\n        }\r\n    ],\r\n    \"details\": {\r\n        \"token\": \"234uhfh78234hlasdfh8234e1234\",\r\n        \"redirectUrl\": \"https://www.saferpay.com/vt2/api/redirecturl\",\r\n        \"expirationDate\": \"2021-05-08T12:06:38.230Z\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://payment-method-route-test-buildconfig.apps.ocp44tef.rapidsweb.com/paymentmethods/v1/paymentmethod"
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "content-type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "content-length",
+							"value": "24"
+						},
+						{
+							"key": "date",
+							"value": "Fri, 28 Aug 2020 06:41:44 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "5f48a723866766692e5c4262"
+				}
+			]
 		},
 		{
 			"name": "GetPaymentmethodByPayID",
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "http://demo-eu23-test.apigee.net/paymentmethods/v1/paymentmethod/5f2a9b82e15cc23f2471e79f"
+				"url": "http://payment-method-route-test-buildconfig.apps.ocp44tef.rapidsweb.com/paymentmethods/v1/paymentmethod/5f48a723866766692e5c4262"
 			},
-			"response": []
+			"response": [
+				{
+					"name": "GetPaymentmethodByPayID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "http://payment-method-route-test-buildconfig.apps.ocp44tef.rapidsweb.com/paymentmethods/v1/paymentmethod/5f48a723866766692e5c4262"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "content-type",
+							"value": "application/json"
+						},
+						{
+							"key": "transfer-encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "date",
+							"value": "Fri, 28 Aug 2020 06:46:18 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"5f48a723866766692e5c4262\",\n    \"href\": \"href/paymentmethod\",\n    \"name\": \"Main Credit card\",\n    \"description\": \"Payment through Credit card\",\n    \"preferred\": true,\n    \"type\": \"CC - Saferpay\",\n    \"status\": \"Active\",\n    \"statusDate\": \"2021-05-08T12:06:38.23\",\n    \"customerId\": \"1-4917643024625\",\n    \"notificationSent\": false,\n    \"details\": {\n        \"id\": \"5f48a723866766692e5c4261\",\n        \"token\": \"234uhfh78234hlasdfh8234e1234\",\n        \"expirationDate\": \"2021-05-08T12:06:38.23\",\n        \"redirectUrl\": \"https://www.saferpay.com/vt2/api/redirecturl\"\n    },\n    \"relatedParty\": [\n        {\n            \"id\": \"5f48a722866766692e5c4260\",\n            \"href\": \"{customerManagementAPI}/customer/1-4917643024625\",\n            \"name\": \"Steffen Ziga\",\n            \"role\": \"owner\",\n            \"referredType\": \"customer\"\n        }\n    ]\n}"
+				}
+			]
 		},
 		{
 			"name": "Stefan-LP",
@@ -49,7 +114,44 @@
 				},
 				"url": "http://payment-method-route-test-buildconfig.apps.ocp44tef.rapidsweb.com/paymentmethods/v1/paymentmethod"
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Stefan-LP",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"href\": \"href/paymentmethod\",\r\n    \"name\": \"my Loyalty account\",\r\n    \"description\": \"Payment through loyalty points\",\r\n    \"preferred\": true,\r\n    \"type\": \"Loyalty account\",\r\n    \"customerId\": \"1-4917643024625\",\r\n    \"status\": \"Active\",\r\n    \"statusDate\": \"2021-07-08T12:06:38.230Z\",\r\n    \"relatedParty\": [\r\n        {\r\n            \"href\": \"{customerManagementAPI}/customer/1-4917643024625\",\r\n            \"referredType\": \"customer\",\r\n            \"name\": \"Steffen Ziga\",\r\n            \"role\": \"owner\"\r\n        }\r\n    ],\r\n    \"details\": {\r\n        \"name\": \"Steffen's Loyality account\",\r\n        \"description\": \"loyalty account information\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://payment-method-route-test-buildconfig.apps.ocp44tef.rapidsweb.com/paymentmethods/v1/paymentmethod"
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "content-type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "content-length",
+							"value": "24"
+						},
+						{
+							"key": "date",
+							"value": "Fri, 28 Aug 2020 06:46:44 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "5f48a84f866766692e5c4264"
+				}
+			]
 		},
 		{
 			"name": "Stefan-Preferred",
@@ -83,7 +185,60 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Stefan-Preferred",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://payment-method-route-test-buildconfig.apps.ocp44tef.rapidsweb.com/paymentmethods/v1/paymentmethod?relatedParty=1-4917643024625&preferred=true",
+							"protocol": "http",
+							"host": [
+								"payment-method-route-test-buildconfig",
+								"apps",
+								"ocp44tef",
+								"rapidsweb",
+								"com"
+							],
+							"path": [
+								"paymentmethods",
+								"v1",
+								"paymentmethod"
+							],
+							"query": [
+								{
+									"key": "relatedParty",
+									"value": "1-4917643024625"
+								},
+								{
+									"key": "preferred",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "content-type",
+							"value": "application/json"
+						},
+						{
+							"key": "transfer-encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "date",
+							"value": "Fri, 28 Aug 2020 08:14:29 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": \"5f48bcbc866766692e5c426e\",\n        \"href\": \"href/paymentmethod\",\n        \"name\": \"my Loyalty account\",\n        \"description\": \"Payment through loyalty points\",\n        \"preferred\": true,\n        \"type\": \"Loyalty account\",\n        \"status\": \"Active\",\n        \"statusDate\": \"2021-07-08T12:06:38.23\",\n        \"customerId\": \"1-4917643024625\",\n        \"notificationSent\": false,\n        \"details\": {},\n        \"relatedParty\": [\n            {\n                \"id\": \"5f48bcbb866766692e5c426d\",\n                \"href\": \"{customerManagementAPI}/customer/1-4917643024625\",\n                \"name\": \"Steffen Ziga\",\n                \"role\": \"owner\",\n                \"referredType\": \"customer\"\n            }\n        ]\n    }\n]"
+				}
+			]
 		},
 		{
 			"name": "Payment Through Credit Card",
@@ -101,7 +256,44 @@
 				},
 				"url": "http://payment-method-route-test-buildconfig.apps.ocp44tef.rapidsweb.com/paymentmethods/v1/paymentmethod"
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Payment Through Credit Card",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"href\": \"href/paymentmethod\",\r\n    \"name\": \"Main Credit Card\",\r\n    \"description\": \"Payment Through Credit Card\",\r\n    \"preferred\": true,\r\n    \"type\": \"CC - Saferpay\",\r\n    \"customerId\": \"1-4917643024299\",\r\n    \"status\": \"Active\",\r\n    \"statusDate\": \"2020-08-03T12:06:38.230Z\",\r\n    \"relatedParty\": [\r\n        {\r\n            \"href\": \"{customerManagementAPI}/customer/1-4917643024299\",\r\n            \"referredType\": \"customer\",\r\n            \"name\": \"David Jones\",\r\n            \"role\": \"owner\"\r\n        }\r\n    ],\r\n    \"details\": {\r\n        \"token\": \"234uhfh78234hlasdfh8234e1299\",\r\n        \"redirectUrl\": \"https://www.saferpay.com/vt2/api/redirecturl\",\r\n        \"expirationDate\": \"2020-08-03T12:06:38.230Z\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://payment-method-route-test-buildconfig.apps.ocp44tef.rapidsweb.com/paymentmethods/v1/paymentmethod"
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "content-type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "content-length",
+							"value": "24"
+						},
+						{
+							"key": "date",
+							"value": "Fri, 28 Aug 2020 08:15:28 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "5f48bd1d866766692e5c4271"
+				}
+			]
 		},
 		{
 			"name": "Payment through safter pay",
@@ -119,7 +311,44 @@
 				},
 				"url": "http://payment-method-route-test-buildconfig.apps.ocp44tef.rapidsweb.com/paymentmethods/v1/paymentmethod"
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Payment through safter pay",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"href\": \"href/paymentmethod\",\r\n    \"name\": \"Pre-paid balance\",\r\n    \"description\": \"Payment through safter pay\",\r\n    \"preferred\": \"false\",\r\n    \"type\": \"Pre-paid\",\r\n    \"customerId\": \"1-4917643024625\",\r\n    \"status\": \"Active\",\r\n    \"statusDate\": \"2021-05-08T12:06:38.230Z\",\r\n    \"relatedParty\": [\r\n        {\r\n            \"href\": \"{customerManagementAPI}/customer/1-4917643024625\",\r\n            \"referredType\": \"customer\",\r\n            \"name\": \"Steffen Ziga\",\r\n            \"role\": \"owner\"\r\n        }\r\n    ],\r\n    \"details\": {\r\n        \"accoontId\": \"67634216\",\r\n        \"href\": \"{prepaidbalance}/account/67634216\",\r\n        \"expirationDate\": \"2021-05-08T12:06:38.230Z\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://payment-method-route-test-buildconfig.apps.ocp44tef.rapidsweb.com/paymentmethods/v1/paymentmethod"
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "content-type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "content-length",
+							"value": "24"
+						},
+						{
+							"key": "date",
+							"value": "Fri, 28 Aug 2020 08:16:41 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "5f48bd69866766692e5c4275"
+				}
+			]
 		}
 	],
 	"protocolProfileBehavior": {}

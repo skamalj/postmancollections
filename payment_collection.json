@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "a4c35fd6-65af-429d-ae13-202ceaabbe47",
 		"name": "Payments",
-		description: "version=1.0 - Paymentmethod postman collection",
+		"description": "version=1.0 - Paymentmethod postman collection",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [

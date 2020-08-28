@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "a4c35fd6-65af-429d-ae13-202ceaabbe47",
+		"_postman_id": "1071c6f6-5aec-440e-b6da-31e417d26acb",
 		"name": "Payments",
 		"description": "version=1.0.0 - Paymentmethod",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
 	"item": [
 		{
@@ -20,48 +20,7 @@
 						}
 					}
 				},
-				"url": {
-					"raw": "http://demo-eu23-test.apigee.net/paymentMethods/v1/paymentmethod",
-					"protocol": "http",
-					"host": [
-						"demo-eu23-test",
-						"apigee",
-						"net"
-					],
-					"path": [
-						"paymentMethods",
-						"v1",
-						"paymentmethod"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "GetPaymentMethodWithCustID",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://demo-eu23-test.apigee.net/paymentMethods/v1/paymentmethod?relatedParty=1-4917643024625",
-					"protocol": "http",
-					"host": [
-						"demo-eu23-test",
-						"apigee",
-						"net"
-					],
-					"path": [
-						"paymentMethods",
-						"v1",
-						"paymentmethod"
-					],
-					"query": [
-						{
-							"key": "relatedParty",
-							"value": "1-4917643024625"
-						}
-					]
-				}
+				"url": "http://payment-method-route-test-buildconfig.apps.ocp44tef.rapidsweb.com/paymentmethods/v1/paymentmethod"
 			},
 			"response": []
 		},
@@ -70,21 +29,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": {
-					"raw": "http://demo-eu23-test.apigee.net/paymentMethods/v1/paymentmethod/5f2a9b82e15cc23f2471e79f",
-					"protocol": "http",
-					"host": [
-						"demo-eu23-test",
-						"apigee",
-						"net"
-					],
-					"path": [
-						"paymentMethods",
-						"v1",
-						"paymentmethod",
-						"5f2a9b82e15cc23f2471e79f"
-					]
-				}
+				"url": "http://demo-eu23-test.apigee.net/paymentmethods/v1/paymentmethod/5f2a9b82e15cc23f2471e79f"
 			},
 			"response": []
 		},
@@ -102,20 +47,7 @@
 						}
 					}
 				},
-				"url": {
-					"raw": "http://demo-eu23-test.apigee.net/paymentMethods/v1/paymentmethod",
-					"protocol": "http",
-					"host": [
-						"demo-eu23-test",
-						"apigee",
-						"net"
-					],
-					"path": [
-						"paymentMethods",
-						"v1",
-						"paymentmethod"
-					]
-				}
+				"url": "http://payment-method-route-test-buildconfig.apps.ocp44tef.rapidsweb.com/paymentmethods/v1/paymentmethod"
 			},
 			"response": []
 		},
@@ -125,15 +57,17 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://demo-eu23-test.apigee.net/paymentMethods/v1/paymentmethod?relatedParty=1-4917643024625&preferred=true",
+					"raw": "http://payment-method-route-test-buildconfig.apps.ocp44tef.rapidsweb.com/paymentmethods/v1/paymentmethod?relatedParty=1-4917643024625&preferred=true",
 					"protocol": "http",
 					"host": [
-						"demo-eu23-test",
-						"apigee",
-						"net"
+						"payment-method-route-test-buildconfig",
+						"apps",
+						"ocp44tef",
+						"rapidsweb",
+						"com"
 					],
 					"path": [
-						"paymentMethods",
+						"paymentmethods",
 						"v1",
 						"paymentmethod"
 					],
@@ -152,7 +86,7 @@
 			"response": []
 		},
 		{
-			"name": "TokenExpired",
+			"name": "Payment Through Credit Card",
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -165,25 +99,12 @@
 						}
 					}
 				},
-				"url": {
-					"raw": "http://demo-eu23-test.apigee.net/paymentMethods/v1/paymentmethod",
-					"protocol": "http",
-					"host": [
-						"demo-eu23-test",
-						"apigee",
-						"net"
-					],
-					"path": [
-						"paymentMethods",
-						"v1",
-						"paymentmethod"
-					]
-				}
+				"url": "http://payment-method-route-test-buildconfig.apps.ocp44tef.rapidsweb.com/paymentmethods/v1/paymentmethod"
 			},
 			"response": []
 		},
 		{
-			"name": "CreatePBMethod",
+			"name": "Payment through safter pay",
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -196,51 +117,7 @@
 						}
 					}
 				},
-				"url": {
-					"raw": "http://demo-eu23-test.apigee.net/paymentMethods/v1/paymentmethod",
-					"protocol": "http",
-					"host": [
-						"demo-eu23-test",
-						"apigee",
-						"net"
-					],
-					"path": [
-						"paymentMethods",
-						"v1",
-						"paymentmethod"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "CreatePayment",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"href\": \"{paymentsAPI}/payment/1345\",\r\n    \"correlatorId\": \"67890\",\r\n    \"paymentDate\": \"2020-08-01T12:06:38.230Z\",\r\n    \"authorizationCode\": \"12345678\",\r\n    \"name\": \"Safer pay\",\r\n    \"description\": \"an example payment via safer pay\",\r\n    \"amount\": {\r\n        \"amount\": 10,\r\n        \"units\": \"EUR\"\r\n    },\r\n    \"taxAmount\": {\r\n        \"amount\": 1.6,\r\n        \"units\": \"EUR\"\r\n    },\r\n    \"totalAmount\": {\r\n        \"amount\": 11.6,\r\n        \"units\": \"EUR\"\r\n    },\r\n    \"channel\": {\r\n        \"href\": \"http://server:port/channels/channel1\",\r\n        \"name\": \"WEB Portal\"\r\n    },\r\n    \"account\": {\r\n        \"href\": \"{accountsAPI}/accounts/44444\",\r\n        \"name\": \"Telco fusion account\",\r\n        \"description\": \"John Doe’s telco account\"\r\n    },\r\n    \"paymentItem\": [\r\n        {\r\n            \"amount\": {\r\n                \"amount\": 6,\r\n                \"units\": \"EUR\"\r\n            },\r\n            \"taxAmount\": {\r\n                \"amount\": 0.96,\r\n                \"units\": \"EUR\"\r\n            },\r\n            \"totalAmount\": {\r\n                \"amount\": 6.96,\r\n                \"units\": \"EUR\"\r\n            },\r\n            \"item\": {\r\n                \"id\": \"1234\",\r\n                \"referredType\": \"bill\",\r\n                \"href\": \"{billingAPI}/accounts/44444/bills/1234\"\r\n            }\r\n        },\r\n        {\r\n            \"amount\": {\r\n                \"amount\": 4,\r\n                \"units\": \"EUR\"\r\n            },\r\n            \"taxAmount\": {\r\n                \"amount\": 0.64,\r\n                \"units\": \"EUR\"\r\n            },\r\n            \"totalAmount\": {\r\n                \"amount\": 4.64,\r\n                \"units\": \"EUR\"\r\n            },\r\n            \"item\": {\r\n                \"referredType\": \"product\",\r\n                \"id\": \"9999\",\r\n                \"href\": \"{catalogAPI}/products/9999\"\r\n            }\r\n        }\r\n    ],\r\n    \"paymentMethod\": {\r\n        \"id\": \"5f26a805071fac3c6724a151\"\r\n    },\r\n    \"status\": \"Authorized\",\r\n    \"statusDate\": \"2017-05-08T12:06:38.230Z\",\r\n    \"payer\": {\r\n        \"href\": \"{partiesAPI}/party/3333333333333\",\r\n        \"name\": \"somebody\",\r\n        \"referredType\": \"individual\"\r\n    }\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://demo-eu23-test.apigee.net/payment/v4/payment",
-					"protocol": "http",
-					"host": [
-						"demo-eu23-test",
-						"apigee",
-						"net"
-					],
-					"path": [
-						"payment",
-						"v4",
-						"payment"
-					]
-				}
+				"url": "http://payment-method-route-test-buildconfig.apps.ocp44tef.rapidsweb.com/paymentmethods/v1/paymentmethod"
 			},
 			"response": []
 		}

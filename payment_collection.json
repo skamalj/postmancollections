@@ -1,0 +1,248 @@
+{
+	"info": {
+		"_postman_id": "a4c35fd6-65af-429d-ae13-202ceaabbe47",
+		"name": "Payments",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CreatePaymenMethod",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"href\": \"href/paymentmethod\",\r\n    \"name\": \"Main Credit card\",\r\n    \"description\": \"Payment through Credit card\",\r\n    \"preferred\": true,\r\n    \"type\": \"CC - Saferpay\",\r\n    \"customerId\": \"1-4917643024625\",\r\n    \"status\": \"Active\",\r\n    \"statusDate\": \"2021-05-08T12:06:38.230Z\",\r\n    \"relatedParty\": [\r\n        {\r\n            \"href\": \"{customerManagementAPI}/customer/1-4917643024625\",\r\n            \"referredType\": \"customer\",\r\n            \"name\": \"Steffen Ziga\",\r\n            \"role\": \"owner\"\r\n        }\r\n    ],\r\n    \"details\": {\r\n        \"token\": \"234uhfh78234hlasdfh8234e1234\",\r\n        \"redirectUrl\": \"https://www.saferpay.com/vt2/api/redirecturl\",\r\n        \"expirationDate\": \"2021-05-08T12:06:38.230Z\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://demo-eu23-test.apigee.net/paymentMethods/v1/paymentmethod",
+					"protocol": "http",
+					"host": [
+						"demo-eu23-test",
+						"apigee",
+						"net"
+					],
+					"path": [
+						"paymentMethods",
+						"v1",
+						"paymentmethod"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPaymentMethodWithCustID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://demo-eu23-test.apigee.net/paymentMethods/v1/paymentmethod?relatedParty=1-4917643024625",
+					"protocol": "http",
+					"host": [
+						"demo-eu23-test",
+						"apigee",
+						"net"
+					],
+					"path": [
+						"paymentMethods",
+						"v1",
+						"paymentmethod"
+					],
+					"query": [
+						{
+							"key": "relatedParty",
+							"value": "1-4917643024625"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPaymentmethodByPayID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://demo-eu23-test.apigee.net/paymentMethods/v1/paymentmethod/5f2a9b82e15cc23f2471e79f",
+					"protocol": "http",
+					"host": [
+						"demo-eu23-test",
+						"apigee",
+						"net"
+					],
+					"path": [
+						"paymentMethods",
+						"v1",
+						"paymentmethod",
+						"5f2a9b82e15cc23f2471e79f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Stefan-LP",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"href\": \"href/paymentmethod\",\r\n    \"name\": \"my Loyalty account\",\r\n    \"description\": \"Payment through loyalty points\",\r\n    \"preferred\": true,\r\n    \"type\": \"Loyalty account\",\r\n    \"customerId\": \"1-4917643024625\",\r\n    \"status\": \"Active\",\r\n    \"statusDate\": \"2021-07-08T12:06:38.230Z\",\r\n    \"relatedParty\": [\r\n        {\r\n            \"href\": \"{customerManagementAPI}/customer/1-4917643024625\",\r\n            \"referredType\": \"customer\",\r\n            \"name\": \"Steffen Ziga\",\r\n            \"role\": \"owner\"\r\n        }\r\n    ],\r\n    \"details\": {\r\n        \"name\": \"Steffen's Loyality account\",\r\n        \"description\": \"loyalty account information\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://demo-eu23-test.apigee.net/paymentMethods/v1/paymentmethod",
+					"protocol": "http",
+					"host": [
+						"demo-eu23-test",
+						"apigee",
+						"net"
+					],
+					"path": [
+						"paymentMethods",
+						"v1",
+						"paymentmethod"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Stefan-Preferred",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://demo-eu23-test.apigee.net/paymentMethods/v1/paymentmethod?relatedParty=1-4917643024625&preferred=true",
+					"protocol": "http",
+					"host": [
+						"demo-eu23-test",
+						"apigee",
+						"net"
+					],
+					"path": [
+						"paymentMethods",
+						"v1",
+						"paymentmethod"
+					],
+					"query": [
+						{
+							"key": "relatedParty",
+							"value": "1-4917643024625"
+						},
+						{
+							"key": "preferred",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TokenExpired",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"href\": \"href/paymentmethod\",\r\n    \"name\": \"Main Credit Card\",\r\n    \"description\": \"Payment Through Credit Card\",\r\n    \"preferred\": true,\r\n    \"type\": \"CC - Saferpay\",\r\n    \"customerId\": \"1-4917643024299\",\r\n    \"status\": \"Active\",\r\n    \"statusDate\": \"2020-08-03T12:06:38.230Z\",\r\n    \"relatedParty\": [\r\n        {\r\n            \"href\": \"{customerManagementAPI}/customer/1-4917643024299\",\r\n            \"referredType\": \"customer\",\r\n            \"name\": \"David Jones\",\r\n            \"role\": \"owner\"\r\n        }\r\n    ],\r\n    \"details\": {\r\n        \"token\": \"234uhfh78234hlasdfh8234e1299\",\r\n        \"redirectUrl\": \"https://www.saferpay.com/vt2/api/redirecturl\",\r\n        \"expirationDate\": \"2020-08-03T12:06:38.230Z\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://demo-eu23-test.apigee.net/paymentMethods/v1/paymentmethod",
+					"protocol": "http",
+					"host": [
+						"demo-eu23-test",
+						"apigee",
+						"net"
+					],
+					"path": [
+						"paymentMethods",
+						"v1",
+						"paymentmethod"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreatePBMethod",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"href\": \"href/paymentmethod\",\r\n    \"name\": \"Pre-paid balance\",\r\n    \"description\": \"Payment through safter pay\",\r\n    \"preferred\": \"false\",\r\n    \"type\": \"Pre-paid\",\r\n    \"customerId\": \"1-4917643024625\",\r\n    \"status\": \"Active\",\r\n    \"statusDate\": \"2021-05-08T12:06:38.230Z\",\r\n    \"relatedParty\": [\r\n        {\r\n            \"href\": \"{customerManagementAPI}/customer/1-4917643024625\",\r\n            \"referredType\": \"customer\",\r\n            \"name\": \"Steffen Ziga\",\r\n            \"role\": \"owner\"\r\n        }\r\n    ],\r\n    \"details\": {\r\n        \"accoontId\": \"67634216\",\r\n        \"href\": \"{prepaidbalance}/account/67634216\",\r\n        \"expirationDate\": \"2021-05-08T12:06:38.230Z\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://demo-eu23-test.apigee.net/paymentMethods/v1/paymentmethod",
+					"protocol": "http",
+					"host": [
+						"demo-eu23-test",
+						"apigee",
+						"net"
+					],
+					"path": [
+						"paymentMethods",
+						"v1",
+						"paymentmethod"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreatePayment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"href\": \"{paymentsAPI}/payment/1345\",\r\n    \"correlatorId\": \"67890\",\r\n    \"paymentDate\": \"2020-08-01T12:06:38.230Z\",\r\n    \"authorizationCode\": \"12345678\",\r\n    \"name\": \"Safer pay\",\r\n    \"description\": \"an example payment via safer pay\",\r\n    \"amount\": {\r\n        \"amount\": 10,\r\n        \"units\": \"EUR\"\r\n    },\r\n    \"taxAmount\": {\r\n        \"amount\": 1.6,\r\n        \"units\": \"EUR\"\r\n    },\r\n    \"totalAmount\": {\r\n        \"amount\": 11.6,\r\n        \"units\": \"EUR\"\r\n    },\r\n    \"channel\": {\r\n        \"href\": \"http://server:port/channels/channel1\",\r\n        \"name\": \"WEB Portal\"\r\n    },\r\n    \"account\": {\r\n        \"href\": \"{accountsAPI}/accounts/44444\",\r\n        \"name\": \"Telco fusion account\",\r\n        \"description\": \"John Doe’s telco account\"\r\n    },\r\n    \"paymentItem\": [\r\n        {\r\n            \"amount\": {\r\n                \"amount\": 6,\r\n                \"units\": \"EUR\"\r\n            },\r\n            \"taxAmount\": {\r\n                \"amount\": 0.96,\r\n                \"units\": \"EUR\"\r\n            },\r\n            \"totalAmount\": {\r\n                \"amount\": 6.96,\r\n                \"units\": \"EUR\"\r\n            },\r\n            \"item\": {\r\n                \"id\": \"1234\",\r\n                \"referredType\": \"bill\",\r\n                \"href\": \"{billingAPI}/accounts/44444/bills/1234\"\r\n            }\r\n        },\r\n        {\r\n            \"amount\": {\r\n                \"amount\": 4,\r\n                \"units\": \"EUR\"\r\n            },\r\n            \"taxAmount\": {\r\n                \"amount\": 0.64,\r\n                \"units\": \"EUR\"\r\n            },\r\n            \"totalAmount\": {\r\n                \"amount\": 4.64,\r\n                \"units\": \"EUR\"\r\n            },\r\n            \"item\": {\r\n                \"referredType\": \"product\",\r\n                \"id\": \"9999\",\r\n                \"href\": \"{catalogAPI}/products/9999\"\r\n            }\r\n        }\r\n    ],\r\n    \"paymentMethod\": {\r\n        \"id\": \"5f26a805071fac3c6724a151\"\r\n    },\r\n    \"status\": \"Authorized\",\r\n    \"statusDate\": \"2017-05-08T12:06:38.230Z\",\r\n    \"payer\": {\r\n        \"href\": \"{partiesAPI}/party/3333333333333\",\r\n        \"name\": \"somebody\",\r\n        \"referredType\": \"individual\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://demo-eu23-test.apigee.net/payment/v4/payment",
+					"protocol": "http",
+					"host": [
+						"demo-eu23-test",
+						"apigee",
+						"net"
+					],
+					"path": [
+						"payment",
+						"v4",
+						"payment"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

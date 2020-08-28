@@ -44,59 +44,6 @@
 			]
 		},
 		{
-			"name": "Stefan-LP",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"href\": \"href/paymentmethod\",\r\n    \"name\": \"my Loyalty account\",\r\n    \"description\": \"Payment through loyalty points\",\r\n    \"preferred\": true,\r\n    \"type\": \"Loyalty account\",\r\n    \"customerId\": \"1-4917643024625\",\r\n    \"status\": \"Active\",\r\n    \"statusDate\": \"2021-07-08T12:06:38.230Z\",\r\n    \"relatedParty\": [\r\n        {\r\n            \"href\": \"{customerManagementAPI}/customer/1-4917643024625\",\r\n            \"referredType\": \"customer\",\r\n            \"name\": \"Steffen Ziga\",\r\n            \"role\": \"owner\"\r\n        }\r\n    ],\r\n    \"details\": {\r\n        \"name\": \"Steffen's Loyality account\",\r\n        \"description\": \"loyalty account information\"\r\n    }\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": "http://payment-method-route-test-buildconfig.apps.ocp44tef.rapidsweb.com/paymentmethods/v1/paymentmethod"
-			},
-			"response": [
-				{
-					"name": "Stefan-LP",
-					"originalRequest": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"href\": \"href/paymentmethod\",\r\n    \"name\": \"my Loyalty account\",\r\n    \"description\": \"Payment through loyalty points\",\r\n    \"preferred\": true,\r\n    \"type\": \"Loyalty account\",\r\n    \"customerId\": \"1-4917643024625\",\r\n    \"status\": \"Active\",\r\n    \"statusDate\": \"2021-07-08T12:06:38.230Z\",\r\n    \"relatedParty\": [\r\n        {\r\n            \"href\": \"{customerManagementAPI}/customer/1-4917643024625\",\r\n            \"referredType\": \"customer\",\r\n            \"name\": \"Steffen Ziga\",\r\n            \"role\": \"owner\"\r\n        }\r\n    ],\r\n    \"details\": {\r\n        \"name\": \"Steffen's Loyality account\",\r\n        \"description\": \"loyalty account information\"\r\n    }\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": "http://payment-method-route-test-buildconfig.apps.ocp44tef.rapidsweb.com/paymentmethods/v1/paymentmethod"
-					},
-					"status": "Created",
-					"code": 201,
-					"_postman_previewlanguage": "plain",
-					"header": [
-						{
-							"key": "content-type",
-							"value": "text/plain;charset=UTF-8"
-						}
-					],
-					"cookie": [],
-					"body": ""
-				}
-			]
-		},
-		{
 			"name": "Stefan-Preferred",
 			"request": {
 				"method": "GET",
@@ -184,7 +131,7 @@
 			]
 		},
 		{
-			"name": "Payment Through Credit Card",
+			"name": "Saferpay",
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -237,7 +184,7 @@
 			]
 		},
 		{
-			"name": "Payment through safter pay",
+			"name": "prepaid",
 			"request": {
 				"method": "POST",
 				"header": [],

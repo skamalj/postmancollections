@@ -11,7 +11,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "http://payment-method-route-test-buildconfig.apps.ocp44tef.rapidsweb.com/paymentmethods/v1/paymentmethod/5f48a723866766692e5c4262"
+				"url": "https://paymentmethod-microcks.apps.ocp44tef.rapidsweb.com/paymentmethods/v1/paymentmethod/5f4a3f9dc9bae36161e524eb"
 			},
 			"response": [
 				{
@@ -19,7 +19,7 @@
 					"originalRequest": {
 						"method": "GET",
 						"header": [],
-						"url": "http://payment-method-route-test-buildconfig.apps.ocp44tef.rapidsweb.com/paymentmethods/v1/paymentmethod/5f48a723866766692e5c4262"
+						"url": "https://paymentmethod-microcks.apps.ocp44tef.rapidsweb.com/paymentmethods/v1/paymentmethod/5f4a3f9dc9bae36161e524eb"
 					},
 					"status": "OK",
 					"code": 200,
@@ -35,11 +35,11 @@
 						},
 						{
 							"key": "date",
-							"value": "Fri, 28 Aug 2020 06:46:18 GMT"
+							"value": "Sat, 29 Aug 2020 12:29:53 GMT"
 						}
 					],
 					"cookie": [],
-					"body": "{\n    \"id\": \"5f48a723866766692e5c4262\",\n    \"href\": \"href/paymentmethod\",\n    \"name\": \"Main Credit card\",\n    \"description\": \"Payment through Credit card\",\n    \"preferred\": true,\n    \"type\": \"CC - Saferpay\",\n    \"status\": \"Active\",\n    \"statusDate\": \"2021-05-08T12:06:38.23\",\n    \"customerId\": \"1-4917643024625\",\n    \"notificationSent\": false,\n    \"details\": {\n        \"id\": \"5f48a723866766692e5c4261\",\n        \"token\": \"234uhfh78234hlasdfh8234e1234\",\n        \"expirationDate\": \"2021-05-08T12:06:38.23\",\n        \"redirectUrl\": \"https://www.saferpay.com/vt2/api/redirecturl\"\n    },\n    \"relatedParty\": [\n        {\n            \"id\": \"5f48a722866766692e5c4260\",\n            \"href\": \"{customerManagementAPI}/customer/1-4917643024625\",\n            \"name\": \"Steffen Ziga\",\n            \"role\": \"owner\",\n            \"referredType\": \"customer\"\n        }\n    ]\n}"
+					"body": "{\n    \"id\": \"5f4a3f9dc9bae36161e524eb\",\n    \"href\": \"href/paymentmethod\",\n    \"name\": \"Pre-paid balance\",\n    \"description\": \"Payment through safter pay\",\n    \"preferred\": false,\n    \"type\": \"Pre-paid\",\n    \"status\": \"Active\",\n    \"statusDate\": \"2021-05-08T12:06:38.23\",\n    \"customerId\": \"1-4917643024625\",\n    \"details\": {\n        \"id\": \"5f4a3f9cc9bae36161e524e9\",\n        \"expirationDate\": \"2021-05-08T12:06:38.23\"\n    },\n    \"relatedParty\": [\n        {\n            \"id\": \"5f4a3f9cc9bae36161e524ea\",\n            \"href\": \"{customerManagementAPI}/customer/1-4917643024625\",\n            \"name\": \"Steffen Ziga\",\n            \"role\": \"owner\",\n            \"referredType\": \"customer\"\n        }\n    ]\n}"
 				}
 			]
 		},
